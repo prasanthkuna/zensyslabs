@@ -30,9 +30,11 @@ const CaseStudy = ({ image, title, description, stats, index }: CaseStudyProps) 
       <div className={`order-1 ${isEven ? "md:order-1" : "md:order-2"}`}>
         <div className="relative overflow-hidden rounded-lg shadow-lg">
           <div className="absolute inset-0 bg-gradient-to-r from-zen-purple/20 to-zen-teal/20 opacity-70"></div>
-          <div className="aspect-[4/3] bg-gray-200 flex items-center justify-center text-muted-foreground text-lg">
-            {image}
-          </div>
+          <img 
+            src={image}
+            alt={title} 
+            className="w-full aspect-[4/3] object-cover"
+          />
         </div>
       </div>
     </div>
@@ -42,13 +44,13 @@ const CaseStudy = ({ image, title, description, stats, index }: CaseStudyProps) 
 const CaseStudies = () => {
   const caseStudies = [
     {
-      image: "AI-powered personalization",
+      image: "https://images.unsplash.com/photo-1543286386-2e659306cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
       title: "Revolutionizing the E-commerce Industry with AI",
       description: "Discover how we helped our client, an e-commerce giant, leverage the power of AI to transform their business, leading to a 40% increase in sales and a 70% reduction in customer churn rate.",
       stats: "40% increase in sales",
     },
     {
-      image: "Blockchain-based identity verification",
+      image: "https://images.unsplash.com/photo-1639322537228-f710d846310a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
       title: "Blockchain-based Identity Verification for a Decentralized World",
       description: "Learn how we helped a startup in the fintech space leverage blockchain technology to create a secure, decentralized identity verification system, leading to increased trust among customers and partners.",
       stats: "Increased trust among customers and partners",

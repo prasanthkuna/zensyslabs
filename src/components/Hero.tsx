@@ -60,9 +60,9 @@ const Hero = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-zen-purple/20 to-zen-blue/20 rounded-xl blur-xl"></div>
           <div className="relative bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-1 rounded-xl shadow-xl">
             <div className="absolute top-0 left-0 w-full h-full bg-white/40 dark:bg-gray-900/40 backdrop-blur-sm rounded-xl"></div>
-            <div className="relative h-[240px] md:h-[360px] rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center overflow-hidden">
+            <div className="relative h-[240px] md:h-[360px] rounded-lg overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" 
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" 
                 alt="IT consultant team working with client" 
                 className="w-full h-full object-cover"
               />

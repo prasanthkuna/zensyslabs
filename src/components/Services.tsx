@@ -58,6 +58,16 @@ const Services = () => {
             solutions that meet your unique business requirements.
           </p>
         </div>
+        
+        <div className="relative mb-16">
+          <img 
+            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
+            alt="Technology solutions" 
+            className="w-full h-64 object-cover rounded-lg shadow-lg"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-zen-purple/40 to-transparent rounded-lg"></div>
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <ServiceCard
