@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">
-              zensy<span className="text-zen-purple">labs</span>
+              zensys<span className="text-zen-purple">labs</span>
             </h3>
             <p className="text-gray-300 mb-4 max-w-md">
               A premier IT consulting firm that specializes in providing innovative

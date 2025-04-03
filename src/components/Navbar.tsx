@@ -38,7 +38,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <a href="#" className="flex items-center">
             <span className="text-2xl font-bold text-zen-blue">
-              zensy<span className="text-zen-purple">labs</span>
+              zensys<span className="text-zen-purple">labs</span>
             </span>
           </a>
         </div>
