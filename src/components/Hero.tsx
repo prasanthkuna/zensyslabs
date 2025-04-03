@@ -1,8 +1,27 @@
 
 import React from "react";
 import { Button } from "./ui/button";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    // Scroll to contact form section
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleLearnMore = () => {
+    // Scroll to services section
+    const servicesSection = document.querySelector("#services");
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -20,10 +39,17 @@ const Hero = () => {
             in providing innovative solutions to businesses and startups.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <Button className="bg-zen-purple hover:bg-zen-indigo text-white px-8 py-6 text-lg">
+            <Button 
+              className="bg-zen-purple hover:bg-zen-indigo text-white px-8 py-6 text-lg"
+              onClick={handleGetStarted}
+            >
               Get Started
             </Button>
-            <Button variant="outline" className="border-zen-purple text-zen-purple hover:bg-zen-purple/10 px-8 py-6 text-lg">
+            <Button 
+              variant="outline" 
+              className="border-zen-purple text-zen-purple hover:bg-zen-purple/10 px-8 py-6 text-lg"
+              onClick={handleLearnMore}
+            >
               Learn More
             </Button>
           </div>
@@ -34,11 +60,12 @@ const Hero = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-zen-purple/20 to-zen-blue/20 rounded-xl blur-xl"></div>
           <div className="relative bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-1 rounded-xl shadow-xl">
             <div className="absolute top-0 left-0 w-full h-full bg-white/40 dark:bg-gray-900/40 backdrop-blur-sm rounded-xl"></div>
-            <div className="relative h-[240px] md:h-[360px] rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-              <div className="text-center p-6">
-                <h3 className="text-xl md:text-2xl font-medium mb-2">Visualize Your IT Infrastructure</h3>
-                <p className="text-muted-foreground mb-4">Interactive dashboard showing our technology solutions</p>
-              </div>
+            <div className="relative h-[240px] md:h-[360px] rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" 
+                alt="IT consultant team working with client" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
