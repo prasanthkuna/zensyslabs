@@ -48,14 +48,20 @@ const ContactForm = () => {
     }
 
     try {
-      // Email sending simulation
+      // Email sending simulation for inquiry notification
       // In a real app, you would call an API endpoint here to send the email
       const emailPromise = new Promise((resolve) => setTimeout(resolve, 1500));
       await emailPromise;
+      
+      // Simulate sending welcome email to the user
+      console.log("Sending welcome email to:", formData.email);
+      const welcomeEmailPromise = new Promise((resolve) => setTimeout(resolve, 500));
+      await welcomeEmailPromise;
 
       // Show success 
       setSubmitSuccess(true);
       toast.success("Message sent successfully! We'll be in touch soon.");
+      toast.success("Welcome email sent to your inbox!");
       
       // Clear form
       setFormData({
@@ -110,7 +116,8 @@ const ContactForm = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-2 text-green-800">Message Sent Successfully!</h3>
-              <p className="text-green-700 mb-6">Thank you for contacting us. Our team will get back to you shortly.</p>
+              <p className="text-green-700 mb-2">Thank you for contacting us. Our team will get back to you shortly.</p>
+              <p className="text-green-700 mb-6">We've also sent you a welcome email. Please check your inbox!</p>
               <Button onClick={() => setSubmitSuccess(false)}>Send Another Message</Button>
             </div>
           ) : (
